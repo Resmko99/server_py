@@ -160,8 +160,8 @@ class UserOut(BaseModel):
         orm_mode = True
 
 class ClientCreate(BaseModel):
-    first_name: constr(regex=LETTER_REGEX, strip_whitespace=True)
-    last_name: constr(regex=LETTER_REGEX, strip_whitespace=True)
+    first_name: constr(pattern=LETTER_REGEX, strip_whitespace=True)
+    last_name: constr(pattern=LETTER_REGEX, strip_whitespace=True)
     phone: constr(min_length=2)
     email: EmailStr
 
